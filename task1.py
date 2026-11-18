@@ -210,3 +210,15 @@ for emp in employees:
 # break - Stops the loop completely
 # salary == 0 - Checks whether salary is zero
 # salary > 85000 - Checks the salary limit
+
+
+# Task 2
+# py -m venv .venv
+# Explanation 
+# py – Runs Python.
+# -m venv – Uses Python's built-in virtual environment module.
+# .venv – Creates a virtual environment folder named .venv.
+
+
+
+
