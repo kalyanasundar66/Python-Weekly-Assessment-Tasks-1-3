@@ -1,9 +1,12 @@
-# Task 1 – Python Core, OOP and Errors
+# Python Weekly Assessment – Tasks 1 to 3
 
-## Objective
+## Task 1 – Python Core, OOP and Errors
+
+### Objective
+
 Develop a Python program to demonstrate Python fundamentals, object-oriented programming, exception handling, and employee data operations.
 
-## Concepts Covered
+### Concepts Covered
 
 1. **Functions:** Created a bonus calculation function using default arguments, `*args`, and `**kwargs`.
 2. **OOP:** Created an Employee class with an annual salary calculation method.
@@ -14,7 +17,7 @@ Develop a Python program to demonstrate Python fundamentals, object-oriented pro
 7. **filter():** Selected employees working in Chennai.
 8. **Control Flow:** Used `for`, `continue`, and `break` to process employee salaries.
 
-## Sample Results
+### Sample Results
 
 - Employee bonus: 6000
 - Employee annual salary: 360000
@@ -23,65 +26,72 @@ Develop a Python program to demonstrate Python fundamentals, object-oriented pro
 - Chennai employees: Arun, Priya, Divya, Suresh
 - Salary loop stops at the first salary above 85000.
 
-## Files
+### Files
 
 - `task1.py` – Python implementation of Task 1.
 - `README.md` – Project explanation and implementation summary.
 
-## How to Run
+### How to Run
 
-```bash
+```powershell
 py task1.py
 ```
 
-## Conclusion
+### Conclusion
 
 Successfully implemented and tested the required Python concepts using employee sample data.
 
+---
 
 ## Task 2 – CSV, JSON, Environment Variables and API Handling
 
 ### Objective
+
 Work with CSV and JSON files, manage environment variables securely, and fetch data from a REST API using Python.
 
 ### Requirements Implemented
 
-1. **Virtual Environment and Packages**
-   - Created a Python virtual environment.
-   - Installed dependencies using `requirements.txt`.
-   - Packages: requests, python-dotenv, pandas, matplotlib, numpy.
+#### 1. Virtual Environment and Packages
 
-2. **CSV and JSON File Handling**
-   - Read employee records using `csv.DictReader()`.
-   - Converted employee records into `employees.json`.
-   - Filtered employees earning above ₹50,000.
-   - Saved filtered records into `high_earners.csv`.
+- Created a Python virtual environment.
+- Installed dependencies using `requirements.txt`.
+- Packages: requests, python-dotenv, pandas, matplotlib, numpy.
 
-3. **Environment Variables**
-   - Stored `API_KEY` in `.env`.
-   - Loaded the key using `python-dotenv`.
-   - Retrieved it using `os.getenv()`.
-   - Added `.env` and `.venv/` to `.gitignore`.
+#### 2. CSV and JSON File Handling
 
-4. **REST API Handling**
-   - Used `requests.get()` to fetch users from JSONPlaceholder.
-   - Set a 5-second request timeout.
-   - Handled timeout, connection, and HTTP errors.
-   - Tested a non-existent user endpoint and handled the 404 response.
+- Read employee records using `csv.DictReader()`.
+- Converted employee records into `employees.json`.
+- Filtered employees earning above ₹50,000.
+- Saved filtered records into `high_earners.csv`.
 
-5. **Nested JSON Processing**
-   - Extracted user ID, name, email, and city.
-   - Used `.get()` to safely access nested address information.
-   - Saved the extracted records into `users.json`.
+#### 3. Environment Variables
+
+- Stored `API_KEY` in `.env`.
+- Loaded the key using `python-dotenv`.
+- Retrieved it using `os.getenv()`.
+- Added `.env` and `.venv/` to `.gitignore`.
+
+#### 4. REST API Handling
+
+- Used `requests.get()` to fetch users from JSONPlaceholder.
+- Set a 5-second request timeout.
+- Handled timeout, connection, and HTTP errors.
+- Tested a non-existent user endpoint and handled the 404 response.
+
+#### 5. Nested JSON Processing
+
+- Extracted user ID, name, email, and city.
+- Used `.get()` to safely access nested address information.
+- Saved the extracted records into `users.json`.
 
 ### Output Files
 
 | File | Description |
 |---|---|
-| employees.csv | Original employee data |
-| employees.json | Employee data in JSON format |
-| high_earners.csv | Employees earning above ₹50,000 |
-| users.json | User details retrieved from the API |
+| `employees.csv` | Original employee data |
+| `employees.json` | Employee data in JSON format |
+| `high_earners.csv` | Employees earning above ₹50,000 |
+| `users.json` | User details retrieved from the API |
 
 ### Sample Output
 
@@ -99,8 +109,15 @@ First 3 Users:
 
 ### How to Run
 
+Install dependencies:
+
 ```powershell
 python -m pip install -r requirements.txt
+```
+
+Run the program:
+
+```powershell
 python task2.py
 ```
 
@@ -108,9 +125,12 @@ python task2.py
 
 Successfully implemented CSV and JSON file operations, environment variable management, REST API requests, exception handling, and nested JSON extraction using Python.
 
+---
+
 ## Task 3 – NumPy, Pandas and Matplotlib
 
 ### 1. NumPy Operations
+
 - Created a 2D marks array for 4 students and 3 subjects.
 - Used `shape` to check array dimensions.
 - Calculated student averages using `axis=1`.
@@ -119,11 +139,13 @@ Successfully implemented CSV and JSON file operations, environment variable mana
 - Used `np.dot()` to calculate weighted scores.
 
 ### 2. Pandas DataFrame Operations
+
 - Loaded employee data from `employees_task3.csv`.
 - Used `info()`, `describe()`, `loc`, and `iloc`.
 - Filtered employees by department and salary.
 
 ### 3. Data Cleaning
+
 - Created `departments.csv` with Sales, HR, IT, Finance, and Marketing.
 - Added two missing salary values and one duplicate employee row.
 - Filled missing salaries using the median.
@@ -131,11 +153,13 @@ Successfully implemented CSV and JSON file operations, environment variable mana
 - Corrected data types.
 
 ### 4. Department Analysis and Merging
+
 - Used `groupby().agg()` to calculate department headcount, average salary, and maximum salary.
 - Performed inner, left, and outer merges using `pd.merge()`.
 - Identified Marketing as the department without employees.
 
 ### 5. Matplotlib Visualizations
+
 Created and saved four charts in the `charts/` folder:
 
 1. `bar_average_salary.png` – Average salary by department.
@@ -144,16 +168,58 @@ Created and saved four charts in the `charts/` folder:
 4. `line_average_salary.png` – Average salary by department.
 
 ### Chart Insights
+
 - Finance has the highest average salary, while Sales has the lowest.
 - Most employees have salaries between INR 66,000 and INR 78,000.
 - Karthik (Employee ID 5) has the highest salary of INR 90,000.
 - Finance has the highest average salary among all departments.
 
 ### Files
+
 - `task3.py`
 - `employees_task3.csv`
 - `departments.csv`
 - `charts/`
 
+### How to Run Task 3
+
+#### 1. Install Required Libraries
+
+Open PowerShell or the VS Code terminal in the Task 3 project folder and run:
+
+```powershell
+py -m pip install numpy pandas matplotlib
+```
+
+#### 2. Run the Python Program
+
+```powershell
+py task3.py
+```
+
+This executes the NumPy operations, Pandas DataFrame analysis, data cleaning, department analysis, merging, and Matplotlib visualizations.
+
+#### 3. Regenerate the Charts
+
+Run the script again whenever you want to regenerate the visualizations:
+
+```powershell
+py task3.py
+```
+
+The generated charts are saved in the `charts/` folder:
+
+- `bar_average_salary.png`
+- `histogram_salary.png`
+- `scatter_id_salary.png`
+- `line_average_salary.png`
+
+#### 4. Verify Generated Files
+
+After execution, check the project folder for the updated chart images inside `charts/`.
+
+**Note:** Run the commands from the directory containing `task3.py` and the required CSV files.
+
 ### Concepts Covered
+
 NumPy, Pandas, DataFrame operations, data cleaning, groupby, aggregation, merging, Matplotlib, and data visualization.
